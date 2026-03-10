@@ -147,6 +147,7 @@ body .active{
 
 
 
+
 /*reused style*/
 .container{
     padding-inline:15px ;
@@ -262,6 +263,29 @@ body .active{
     border-radius: 50px;
 }
 
+.absImg{
+    position: absolute;
+    transform: scale(1);
+}
+
+.scaleUpAnimation{
+    animation: scaleUp 1s linear infinite alternate;
+}
+
+.sectionTItle > .span{
+    display: inline-block;
+    color: var(--azureBlue);
+}
+
+@keyframes scaleUp{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform:scale(1.05);
+    }
+}
+
 
 /*header*/
 .headerBtnGroup .btn{
@@ -278,7 +302,7 @@ body .active{
     width: 100%;
     padding-block: 20px;
     border-block-end: 1px solid var(--charcoal);
-    z-index: 0;
+    z-index: 10;
 }
 
 .header.active{
@@ -374,6 +398,7 @@ body .active{
     visibility: hidden;
     height: 0;
     transition: var(--transition-1);
+    z-index: 10;
 }   
 .navbar.active{
     height: 240px;
@@ -467,6 +492,7 @@ body .active{
 }
 .quote{
     background-image: url("img/quoteBg.jpg");
+    
     padding: var(--padding);
     background-repeat: no-repeat;
     background-size:cover;
@@ -566,4 +592,74 @@ body .active{
 .promoItem{
     min-width: 100%;
     scroll-snap-align:start;
+}
+
+
+.about{
+    text-align: center;
+}
+
+.aboutBanner{
+    position: relative;
+}
+
+.aboutImg{
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin-inline: auto;
+}
+
+.aboutBanner .absImg{
+    top: 20px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+/* mobile fix */
+@media (max-width: 600px){
+  .aboutBanner .absImg{
+    width: 100px;
+    top: 10;
+  }
+}
+
+.about .sectionTitle{
+    max-width: 15ch;
+    margin-block:40px 10px;
+    margin-inline:auto;
+}
+
+.aboutList{
+    margin-block:20px 32px;
+}
+
+.aboutItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.aboutItem:not(:last-child){
+    margin-block-end: 10px;
+}
+
+.aboutItem ion-icon{
+    background-color: var(--royalBlue);
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 4px;
+    border-radius: 50%;
+    --ionicon-stroke-width: 112px;
+}
+
+.aboutItem .span{
+    color:var(--richBlack);
+    font-family: var(--fontInter);
+    font-weight: var(--fontWeight-500);
+}
+
+.about .btn{
+    margin-inline:auto;
 }
