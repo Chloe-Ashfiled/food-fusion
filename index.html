@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Fusion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg" href="img/favicon.svg">
+
+
+</head>
+<body>
+    <header class="header" dataHeader>
+        <div class="container">
+            <h1>
+                <a href="#" class="logo">
+                    Food Fusion <span class="span">.</span>
+                </a>
+            </h1>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbarList">
+                    <li class="navItem">
+                        <a href="#home" class="navbarLink" dataNavLink>Home</a>
+                    </li>
+
+                    <li class="navItem">
+                        <a href="#about" class="navbarLink" dataNavLink>About Us</a>
+                    </li>
+
+                    <li class="navItem">
+                        <a href="#shop" class="navbarLink" dataNavLink>Shop</a>
+                    </li>
+
+                    <li class="navItem">
+                        <a href="#blog" class="navbarLink" dataNavLink>Blog</a>
+                    </li>
+
+                    <li class="navItem">
+                        <a href="#contact" class="navbarLink" dataNavLink>Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="headerBtnGroup">
+                <button class="searchBtn" aria-label="Search" dataSearchBtn>
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+
+                <button class="btn btnHover">Reservation</button>
+
+                <button class="navToggleBtn" aria-label="Toggle Menu" dataNavToggleBtn>
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="searchBoxContainer" dataSearchContainer>
+        <div class="searchBox">
+            <!--autocomplete:off gets rid of the suggestion box that breaks the entire site-->
+            <input type="search" name="search" aria-label = "Search here" placeholder = "Enter keywords here..." class="searchInput" autocomplete="off">
+
+            <button class="searchEnterBtn" aria-label = "Enter search" dataSearchEnterBtn>
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+        </div>
+        <button class="searchCancleBtn" aria-label = "Cancel search" dataSearchCancelBtn>
+        </button>
+    </div>
+
+    <main>
+        <article>
+            <section class="quote" id="home">
+                <div class="quoteContent">
+                    <p class="quoteSubtitle">Eat Explore Enjoy.</p>
+
+                    <h2 class="h1 quoteTitle">Discover delicious flavors crafted with passion.</h2>
+
+                    <p class="quoteText">
+                        From fresh ingredients to unforgettable taste,
+                        dish is a fusion of creativity and flavor.
+                    </p>
+
+                    <button class="btn">Book A Table!</button>
+
+                    <img src="img/salmon.png" width="820" height="712" alt="salmon dish" class="quoteBanner">
+                </div>
+            </section>
+
+
+            <section class="section sectionDivider white promotion">
+                <div class="container">
+                    <ul class="promoList scrollbar">
+                        <li class="promoItem">
+                            <div class="promoCard">
+                                <div class="cardIcon">
+                                    <img src="img/salad.svg" width="150" height="150">
+                                </div>
+
+                                <h3 class="h3 cardTitle">Mediterranean Salad</h3>
+                                
+                                <p class="cardText">A vibrant mix of fresh vegetables, olives, feta cheese, and a light dressing for a refreshing and healthy option</p>
+                                <img src="img/promo-1.jpg" width="300" height="300" alt="Mediterranean Salad" class="w_100 cardImg">
+                            </div>
+                        </li>
+
+                        <li class="promoItem">
+                            <div class="promoCard">
+                                <div class="cardIcon">
+                                    <img src="img/steak.svg" width="150" height="150">
+                                </div>
+
+                                <h3 class="h3 cardTitle">Grilled Steak</h3>
+                                
+                                <p class="cardText">Tender, juicy steak grilled to perfection and served with rich seasoning that enhances every bite</p>
+                                <img src="img/promo-2.jpg" width="300" height="300" alt="Mediterranean Salad" class="w_100 cardImg">
+                            </div>
+                        </li>
+
+                        <li class="promoItem">
+                            <div class="promoCard">
+                                <div class="cardIcon">
+                                    <img src="img/taco.svg" width="150" height="150">
+                                </div>
+
+                                <h3 class="h3 cardTitle">Shrimp Tacos</h3>
+                                
+                                <p class="cardText">Soft tortillas filled with crispy shrimp, fresh toppings, and zesty sauce for a bold street-style flavor</p>
+                                <img src="img/promo-3.jpg" width="300" height="300" alt="Mediterranean Salad" class="w_100 cardImg">
+                            </div>
+                        </li>
+
+                        <li class="promoItem">
+                            <div class="promoCard">
+                                <div class="cardIcon">
+                                    <img src="img/pasta.svg" width="150" height="150">
+                                </div>
+
+                                <h3 class="h3 cardTitle">Chicken Alfredo</h3>
+                                
+                                <p class="cardText">Silky fettuccine pasta tossed in a rich parmesan cream sauce, finished with herbs for a comforting Italian classic.</p>
+                                <img src="img/promo-4.jpg" width="300" height="300" alt="Mediterranean Salad" class="w_100 cardImg">
+                            </div>
+                        </li>
+
+                        <li class="promoItem">
+                            <div class="promoCard">
+                                <div class="cardIcon">
+                                    <img src="img/curry.svg" width="150" height="150">
+                                </div>
+
+                                <h3 class="h3 cardTitle">Chicken Alfredo</h3>
+                                
+                                <p class="cardText">A fragrant blend of coconut milk, green curry spices, tender chicken, and fresh vegetables served with steamed rice</p>
+                                <img src="img/promo-5.jpg" width="300" height="300" alt="Mediterranean Salad" class="w_100 cardImg">
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+<!--ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./script.js" defer></script> 
+</html>
