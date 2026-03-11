@@ -251,7 +251,7 @@ body.active{
 }
 
 .scrollbar::-webkit-scrollbar-button{
-    width: calc(25%-40px);
+    width: calc(25% - 40px);
 }
 
 .scrollbar::-webkit-scrollbar-track{
@@ -260,8 +260,12 @@ body.active{
 }
 
 .scrollbar::-webkit-scrollbar-thumb{
-    border: 3px solid var(--cultured);
-    border-radius: 50px;
+  background: var(--azureBlue);
+  border-radius: 50px;
+  border: 3px solid var(--cultured);
+}
+.scrollbar::-webkit-scrollbar-thumb:hover{
+  background: var(--royalBlue);
 }
 
 .absImg{
@@ -449,7 +453,6 @@ body.active{
     visibility: hidden;
     opacity: 0;
     transition: var(--transition-2);
-    z-index: 20;
 }
 
 .searchBoxContainer.active{
