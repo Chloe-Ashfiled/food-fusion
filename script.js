@@ -1,7 +1,7 @@
 'user strict'
 
 const header=document.querySelector("[dataHeader]")
-const toTopBtn=document.querySelector("[dataBackToTOpBtn]")
+const toTopBtn=document.querySelector("[dataBackToTopBtn]")
 
 window.addEventListener("scroll",function(){
     if(this.window.scrollY>=100){
@@ -71,3 +71,4 @@ window.addEventListener("scroll", function(){
         deliveryTruck.style.transform=`translateX(${deliveryTruckMove}px)`;
     }
 })
+
