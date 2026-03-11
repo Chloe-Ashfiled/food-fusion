@@ -114,7 +114,7 @@ body{
     overflow-x: hidden;
 }
 
-body .active{
+body.active{
     overflow: hidden;
 }
 
@@ -316,38 +316,22 @@ body .active{
 }
 
 .header{
-    --color:var(--richBlack);;
-    --btn-color:var(--onyx);
-
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding-block: 20px;
     border-block-end: 1px solid var(--charcoal);
-    z-index: 10;
+    transform: translateY(0);
+    transition: transform 0.35s ease;
+    z-index: 100;
 }
 
 .header.active{
-    --color:var(--richBlack);
-    --btn-color:var(--richBlack);
-
-    position:fixed;
-    top:-86px;
+    transform: translateY(0);
     background-color: var(--platinum);
     box-shadow: var(--boxShadow-1);
-    animation: slide 0.5s ease-out forwards;
 }
-
-@keyframes slide{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(100%);
-    }
-}
-
 .header .container{
     display: flex;
     justify-content: space-between;
