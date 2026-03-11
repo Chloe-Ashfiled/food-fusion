@@ -1,12 +1,15 @@
 'user strict'
 
 const header=document.querySelector("[dataHeader]")
+const toTopBtn=document.querySelector("[dataBackToTOpBtn]")
 
 window.addEventListener("scroll",function(){
     if(this.window.scrollY>=100){
         header.classList.add("active");
+        toTopBtn.classList.add("active");
     }else{
         header.classList.remove("active");
+        toTopBtn.classList.remove("active");
     }
 });
 //[] is use because we want to select an html attribute not a class or element
@@ -40,3 +43,28 @@ for(let i=0;i<searchBoxElements.length;i++){
         document.body.classList.toggle("active");
     })
 }
+
+
+
+//move truck on scroll
+const deliveryTruck=document.querySelector("[data-delivery-truck]");
+
+let deliveryTruckMove=-80;
+let lastScrollPos=0;
+
+window.addEventListener("scroll", function(){
+    let deliveryTruckTopPos=deliveryTruck.getBoundingClientRect().top;
+
+    if(deliveryTruckTopPos<500 && deliveryTruckTopPos >-250){
+        let activeScrollPos=this.window.scrollY;
+
+        if(lastScrollPos<activeScrollPos){
+            deliveryTruckMove++;
+        }else{
+            deliveryTruckMove--;
+        }
+
+        lastScrollPos=activeScrollPos;
+        deliveryTruck.style.transform=`translateX(${deliveryTruckMove}px)`;
+    }
+})
