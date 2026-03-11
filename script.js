@@ -25,8 +25,11 @@ menuToggleBtn.addEventListener("click", function(){
 //close menu when a link is clicked
 for(let i=0;i<navbarLinks.length;i++){
     navbarLinks[i].addEventListener("click",function(){
-        navbar.classList.toggle("active");
-        menuToggleBtn.classList.toggle("active");
+        navbar.classList.remove("active");
+        menuToggleBtn.classList.remove("active");
+
+        searchContainer.classList.remove("active");
+        document.body.classList.remove("active");
     })
 }
 
