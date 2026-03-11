@@ -449,6 +449,7 @@ body.active{
     visibility: hidden;
     opacity: 0;
     transition: var(--transition-2);
+    z-index: 20;
 }
 
 .searchBoxContainer.active{
